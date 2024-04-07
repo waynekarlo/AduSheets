@@ -1,0 +1,16 @@
+.header {
+    text-align: center;
+    padding: 15px;
+    background-color: #003169;
+    position: relative;
+}
+.logo {
+    display: block;
+    align-content: center;
+}
+.fortext{
+    width: 250px;
+}
+.welcome{
+    font-family: Helvetica, sans-serif;
+}
