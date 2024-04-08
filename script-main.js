@@ -4,99 +4,189 @@
     var Name="";
     function register()
     {
-        
         Name = document.getElementById('Username').value;
         document.getElementById('GameNa').innerHTML= "Welcome, "+ Name;
         document.getElementById('DifficultyOptions').style.display = 'block';
     }
    
     // DIFFICULTY
-    var x, y;
     function chooseDifficulty(difficulty){
         document.getElementById('OperationOptions').style.display = 'block';
-        switch(difficulty){
+        switch(difficulty)
+        {
             case 'easy':
-                easy(x,y);
+                easy(3,6);
+                document.getElementById('btnMedium').style.display = 'none';
+                document.getElementById('btnHard').style.display = 'none';
             break;
 
             case 'medium':
-                //code
+                medium(4,5);   
+                document.getElementById('btnEasy').style.display = 'none';
+                document.getElementById('btnHard').style.display = 'none';
             break;
 
             case 'hard':
-                //code      
+                hard(5,9);
+                document.getElementById('btnEasy').style.display = 'none';
+                document.getElementById('btnMedium').style.display = 'none';
+                    
             break;
-        }   
+        }
+           
     }               
 
-    function chooseOperation(operation){   
-        switch(operation){
+    function chooseOperation(operation)
+    {   
+        switch(operation)
+        {
             case 'addition':
-                addition(x,y)
+                addition()
+                document.getElementById('StartButton').style.display = 'block';
+                document.getElementById('btnSub').style.display = 'none';
+                document.getElementById('btnMul').style.display = 'none';
+                document.getElementById('btnDiv').style.display = 'none';
+                document.getElementById('btnNom').style.display = 'none';
             break;
 
             case 'subtraction':
                 //code
+                document.getElementById('StartButton').style.display = 'block';
+                document.getElementById('btnAdd').style.display = 'none';
+                document.getElementById('btnMul').style.display = 'none';
+                document.getElementById('btnDiv').style.display = 'none';
+                document.getElementById('btnNom').style.display = 'none';
             break;
 
             case 'multiplication':
                 //code
+                document.getElementById('StartButton').style.display = 'block';
+                document.getElementById('btnAdd').style.display = 'none';
+                document.getElementById('btnSub').style.display = 'none';
+                document.getElementById('btnDiv').style.display = 'none';
+                document.getElementById('btnNom').style.display = 'none';
             break;
+
             
             case 'division':
                 //code
+                document.getElementById('StartButton').style.display = 'block';
+                document.getElementById('btnSub').style.display = 'none';
+                document.getElementById('btnMul').style.display = 'none';
+                document.getElementById('btnAdd').style.display = 'none';
+                document.getElementById('btnNom').style.display = 'none';
             break;
 
             case 'nomials':
                 //code
+                document.getElementById('StartButton').style.display = 'block';
+                document.getElementById('btnSub').style.display = 'none';
+                document.getElementById('btnMul').style.display = 'none';
+                document.getElementById('btnDiv').style.display = 'none';
+                document.getElementById('btnAdd').style.display = 'none';
             break;
         }
     }
+    function easy(x,y) {
+        for (ordinate=1;ordinate<=y;ordinate++)
+        {
+        gen+='<tr>\n';
     
-    function easy(x,y){
-        x = 10;
-        y = 10;
-    }
-    function medium(x,y){
-        x = 30;
-        y = 30;
-    }
-    function hard(x,y){
-        x = 50;
-        y = 50;
-    }
-
-    // GENERATOR
-    var gen="";
-    var num;
-    function addition(x,y){
+            for (abscissa=1;abscissa<=x;abscissa++)
+            {
+                num++
+                gen+='<td><div class="tbl" id="sheet' + num + '"></div></td>\n';
+            }
+            gen+='<tr>\n';
         
-        for (ordinate=1;ordinate<=y;ordinate++){
-            gen += '<tr>\n';
-        
-        for (abscissa=1;abscissa<=x;abscissa++){
-            num++
-            gen += '<td><div id="sheet' + num + '</div></td>\n';
+            document.getElementById('tbl').innerHTML=gen;
+            
+            console.log(gen);
         }
-        gen+= '<tr>';
-        document.getElementById('tbl').innerHTML=gen;
-        console.log(gen);
     }
-
+    function medium(x,y) {
+        for (ordinate=1;ordinate<=y;ordinate++)
+        {
+        gen+='<tr>\n';
+    
+            for (abscissa=1;abscissa<=x;abscissa++)
+            {
+                num++
+                gen+='<td><div class="tbl" id="sheet' + num + '"></div></td>\n';
+            }
+            gen+='<tr>\n';
+        
+            document.getElementById('tbl').innerHTML=gen;
+            
+            console.log(gen);
+        }
+    }
+    function hard(x,y) {
+        for (ordinate=1;ordinate<=y;ordinate++)
+        {
+        gen+='<tr>\n';
+    
+            for (abscissa=1;abscissa<=x;abscissa++)
+            {
+                num++
+                gen+='<td><div class="tbl" id="sheet' + num + '"></div></td>\n';
+            }
+            gen+='<tr>\n';
+        
+            document.getElementById('tbl').innerHTML=gen;
+            
+            console.log(gen);
+        }
+    }
+    // GENERATOR
+    
+    function addition()
+    {
+        
+    }
+    function subtraction()
+    {
+        
+    }
+    function multiplication()
+    {
+        
+    }
+    function division()
+    {
+        
+    }
+    function nomials()
+    {
+        
+    }
     // FUNCTIONALITIES
-    function calculateTotalScore(){
+    var gen="";
+    var num=0;
+    function Start()
+    {
+        document.getElementById('hidesheet').style.display='block';
+        document.getElementById('OperationOptions').style.display='none';
+        document.getElementById('DifficultyOptions').style.display='none';
+        document.getElementById('StartButton').style.display = 'none';
+    }
+    
+    function calculateTotalScore()
+    {
         
     }
 
-    function showSolution(){
+    function showSolution()
+    {
         
     }
 
-    function solvingTimer(){
+    function solvingTimer()
+    {
 
     }
 
-    function recordAttemmpt(){
+    function recordAttemmpt()
+    {
 
     }   
-}

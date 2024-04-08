@@ -28,22 +28,32 @@
         <!-- DIFFICULTY -->
             <div id = "DifficultyOptions" style="display:none">
                 <h3> Choose Difficulty: </h3>   
-                <button onclick="chooseDifficulty('easy')"> Easy </button>
-                <button onclick="chooseDifficulty('medium')"> Medium </button>
-                <button onclick="chooseDifficulty('hard')"> Hard </button> 
-        
+                <button id="btnEasy" class="foreasy" onclick="chooseDifficulty('easy')"> <b>Easy</b> </button>
+                <button id="btnMedium" class="formedium" onclick="chooseDifficulty('medium')"> <b>Medium</b> </button>
+                <button id="btnHard" class="forhard" onclick="chooseDifficulty('hard')"> <b>Hard</b> </button> 
+            </div>  
+            
         <!-- OPERATION -->
-                <div id = "OperationOptions" style="display:none">
-                    <h3> Choose Operation: </h3>
-                    <button onclick="chooseOperation('addition')"> Addition </button>
-                    <button onclick="chooseOperation('subtraction')"> Subtraction </button>
-                    <button onclick="chooseOperation('multiplication')"> Multiplication </button>
-                    <button onclick="chooseOperation('division')"> Division </button>
-                    <button onclick="chooseOperation('nomials')"> Polynomials </button>
-                </div> 
+            <div id = "OperationOptions" style="display:none">
+                <h3> Choose Operation: </h3>
+                <button id="btnAdd" class="buttonSize" onclick="chooseOperation('addition')"> <b>Addition</b> </button>
+                <button id="btnSub" class="buttonSize" onclick="chooseOperation('subtraction')"> <b>Subtraction</b> </button>
+                <button id="btnMul" class="buttonSize" onclick="chooseOperation('multiplication')"> <b>Multiplication</b></button>
+                <button id="btnDiv" class="buttonSize" onclick="chooseOperation('division')"> <b>Division</b> </button>
+                <button id="btnNom" class="buttonSize" onclick="chooseOperation('nomials')"> <b>Polynomials</b> </button>
             </div> 
+            
+        <!-- START -->
+            <div id = "StartButton" style="display:none">
+                <br>
+                <button id ="StartCase" class="BtnStart" onclick="Start()"><b>Start!</b></button>
+            </div>
         </center>
-        
+        <br><br>
+        <!-- GENERATED CONTENT -->
+        <div id="hidesheet" style="display:none">
+        <center><table id="tbl"></table></center>
+        </div>
     </body>
 
     <script src="script-main.js"></script>

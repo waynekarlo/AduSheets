@@ -1,3 +1,4 @@
+/* INDEX */
 .header {
     text-align: center;
     padding: 15px;
@@ -14,3 +15,85 @@
 .welcome{
     font-family: Helvetica, sans-serif;
 }
+
+/* DIFFICULTY */
+#btnEasy{
+    background-color: green;
+    height: 45px;
+    width: 90px;
+    border: 3px ridge green;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+}
+
+#btnMedium{
+    background-color: orange;
+    height: 45px;
+    width: 90px;
+    border:3px ridge orange;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+}
+
+#btnHard{
+    background-color: red;
+    height: 45px;
+    width: 90px;
+    border: 3px ridge red;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+
+/* OPERATIONS */
+}
+.buttonSize{
+    background-color: dodgerblue;
+    color: white;
+    border: 3px outset gold;
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    box-shadow: 2px 10px 3px #888888;
+}
+
+#btnAdd{
+    display: inline-block;
+}
+
+#btnSub{
+    display: inline-block;
+}
+
+#btnMul{
+    display: inline-block;
+}
+
+#btnDiv{
+    display: inline-block;
+}
+
+#btnNom{
+    display: inline-block;
+}
+
+/* START */
+.BtnStart{
+    background-color: white;
+    border: 3px double yellow ;
+    color:dodgerblue;
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    box-shadow: 2px 10px 3px #888888;
+}
+
+/* GENERATED */
+.tbl{
+    height: 50px;
+	width: 50px;
+	border: 2px solid black;
+	margin: auto;
+}
+
