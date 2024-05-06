@@ -2,6 +2,7 @@
 <html>
     <title>Adu Sheets</title>
     <head>
+        <meta charset="utf-8">
 
         <!-- EXTERNAL LINKS -->
         <link rel="stylesheet" href="style-main.css">
@@ -22,8 +23,21 @@
         <center>
             <h2>Welcome to AdU Sheets! <br> Your go-to math partner.<br><br><br>What's Your Name?</h2>
             <input class ="fortext" type="text" id ="Username" name="Username" placeholder ="Enter Your Username Here!">
+            
+            <div id="reg">
             <button onclick="register()">Enter</button>
+            </div>
             <h3 id="GameNa">&nbsp;</h3>
+
+        <!-- OPERATION -->
+            <div id = "OperationOptions" style="display:none">
+                <h3> Choose Operation: </h3>
+                <button id="btnAdd" class="buttonSize" onclick="chooseOperation('addition')"> <b>Addition</b> </button>
+                <button id="btnSub" class="buttonSize" onclick="chooseOperation('subtraction')"> <b>Subtraction</b> </button>
+                <button id="btnMul" class="buttonSize" onclick="chooseOperation('multiplication')"> <b>Multiplication</b></button>
+                <button id="btnDiv" class="buttonSize" onclick="chooseOperation('division')"> <b>Division</b> </button>
+                <button id="btnNom" class="buttonSize" onclick="chooseOperation('nomials')"> <b>Polynomials</b> </button>
+            </div>     
 
         <!-- DIFFICULTY -->
             <div id = "DifficultyOptions" style="display:none">
@@ -33,21 +47,13 @@
                 <button id="btnHard" class="forhard" onclick="chooseDifficulty('hard')"> <b>Hard</b> </button> 
             </div>  
             
-        <!-- OPERATION -->
-            <div id = "OperationOptions" style="display:none">
-                <h3> Choose Operation: </h3>
-                <button id="btnAdd" class="buttonSize" onclick="chooseOperation('addition')"> <b>Addition</b> </button>
-                <button id="btnSub" class="buttonSize" onclick="chooseOperation('subtraction')"> <b>Subtraction</b> </button>
-                <button id="btnMul" class="buttonSize" onclick="chooseOperation('multiplication')"> <b>Multiplication</b></button>
-                <button id="btnDiv" class="buttonSize" onclick="chooseOperation('division')"> <b>Division</b> </button>
-                <button id="btnNom" class="buttonSize" onclick="chooseOperation('nomials')"> <b>Polynomials</b> </button>
-            </div> 
-            
         <!-- START -->
             <div id = "StartButton" style="display:none">
                 <br>
                 <button id ="StartCase" class="BtnStart" onclick="Start()"><b>Start!</b></button>
             </div>
+
+            <div id="timer"></div>
         </center>
         <br><br>
         <!-- GENERATED CONTENT -->
