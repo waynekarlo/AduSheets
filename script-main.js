@@ -248,17 +248,24 @@ function hard(x, y) {
 
 // POLYNOMIAL FUNCTION
 function foil(binomial1, binomial2) {
+    let terms1 = binomial1.split('+');
+    let terms2 = binomial2.split('+');
     
-    let terms1 = binomial1.split('+').map(term => term.trim());
-    let terms2 = binomial2.split('+').map(term => term.trim());
-
+    
+    for (let i = 0; i < terms1.length; i++) {
+        terms1[i] = terms1[i].trim();
+    }
+    for (let i = 0; i < terms2.length; i++) {
+        terms2[i] = terms2[i].trim();
+    }
+    
     let coefficient1 = parseInt(terms1[0]);
     let coefficient2 = parseInt(terms2[0]);
     let exponent1 = parseInt(terms1[0].split('^')[1]);
     let exponent2 = parseInt(terms2[0].split('^')[1]);
     let constant1 = parseInt(terms1[1]);
     let constant2 = parseInt(terms2[1]);
-
+    
     let first = coefficient1 * coefficient2;
     let outer = coefficient1 * constant2;
     let inner = constant1 * coefficient2;
