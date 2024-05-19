@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <title>Adu Sheets</title>
+    <title>AdU Sheets</title>
     <head>
         <meta charset="utf-8">
 
@@ -11,7 +11,7 @@
         <!-- HEADER -->
         <section class = "header">
             <div class = "logo">
-                <a href="index.html"><img id="adulogo" src="images/adulogo.png" width="100" height="100"></a>
+                <a href="index.html"><img id="Sheetslogo" src="images/SheetsLogo.png" width="150" height="100"></a>
             </div>
         </section>          
 
@@ -23,10 +23,8 @@
         <center>
             <h2>Welcome to AdU Sheets! <br> Your go-to math partner.<br><br><br>What's Your Name?</h2>
             <input class ="fortext" type="text" id ="Username" name="Username" placeholder ="Enter Your Username Here!">
-            
-            <div id="reg">
-            <button onclick="register()">Enter</button>
-            </div>
+			<br/><br/>
+            <button id ="reg" onclick="register()" class="BtnStde"><b>Enter</b></button>
             <h3 id="GameNa">&nbsp;</h3>
 
         <!-- OPERATION -->
@@ -51,6 +49,7 @@
             <div id = "StartButton" style="display:none">
                 <br>
                 <button id ="StartCase" class="BtnStart" onclick="Start()"><b>Start!</b></button>
+                
             </div>
 
             <div id="timer"></div>
@@ -60,6 +59,15 @@
         <div id="hidesheet" style="display:none">
         <center><table id="tbl"></table></center>
         </div>
+
+        <center>
+            <br/>
+            <p1 id="score" class="txtScore" style="display: none;">Score:</p1>
+            <br/>
+            <button id="SubmitButton" class="BtnStde" style="display: none;"><b>Submit</b></button>
+            <br/>
+		    <button id="PauseButton" class="BtnSC" onclick="Pause()" style="display: none;"><b>Pause</b></button>
+		</center>
     </body>
 
     <script src="script-main.js"></script>
