@@ -133,7 +133,7 @@ function binomials(x, y) {
             let result = foil(binomial1, binomial2);
 
             num++;
-            gen += `<td><div class="tbl" id="sheet${num}">&nbsp;<br/>(${binomial1})(${binomial2})<br/>= <span class="result" id="result${num}">${result}</span>\n<input type="text" id="answer${num}" class="writeFromRight" size="8"><br/><br/><button onclick="validateAnswer(${num})" class="BtnStd">Check Answer</button><button onclick="showSolution(${num})" class="BtnStd">Show Solution!</button></div></td>\n`;
+            gen += `<td><div class="tbl" id="sheet${num}">&nbsp;<br/>(${binomial1})(${binomial2})<br/>= <span class="result" id="result${num}">${result}</span>\n<input type="text" id="answer${num}" class="writeFromRight" size="8"><br/><br/><button onclick="showSolution(${num})" class="BtnStd">Show Solution!</button></div></td>\n`;
         }
         gen += '</tr>\n';
     }
